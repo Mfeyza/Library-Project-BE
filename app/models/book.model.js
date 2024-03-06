@@ -5,7 +5,7 @@
 /* -------------------------------------------------------------------------- */
 
 const {Sequelize,DataTypes}=require('sequelize')
-const sequelize=new Sequelize('sqlite: ./db.sqlite3')
+const sequelize=new Sequelize('sqlite:./db.sqlite3')
 
 const Book = sequelize.define('books',{
  title: {
@@ -14,12 +14,11 @@ const Book = sequelize.define('books',{
  },
  author:{
     type:DataTypes.STRING,
-    allowNull:false,
     allowNull:false
 
  },
  ISBN:{
-    type:DataTypes.INTEGER,
+    type:DataTypes.STRING,
     allowNull:false
     
  },
@@ -44,8 +43,8 @@ const Book = sequelize.define('books',{
 Syncronization:
 
 sequelize.sync() 
-sequelize.sync({ force: true }) 
-sequelize.sync({ alter: true }) 
+// sequelize.sync({ force: true }) 
+// sequelize.sync({ alter: true }) 
 
 
 sequelize.authenticate()
