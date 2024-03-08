@@ -5,7 +5,7 @@
 /* -------------------------------------------------------------------------- */
 
 const {Sequelize,DataTypes}=require('sequelize')
-const sequelize=new Sequelize('sqlite:./db.sqlite3')
+const sequelize=new Sequelize('postgres://default:6tWNCPBfmyZ0@ep-plain-bar-a4czbxuc.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require')
 
 const Book = sequelize.define('books',{
  title: {
