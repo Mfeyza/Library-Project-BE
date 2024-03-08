@@ -13,7 +13,7 @@ const app=express()
 require('dotenv').config();
 const PORT=process.env.PORT || 8000;
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: 'https://book-assignment-nine.vercel.app/'
 }))
 require ('express-async-errors')
 
