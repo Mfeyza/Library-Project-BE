@@ -18,7 +18,7 @@ const Book = sequelize.define('books',{
 
  },
  ISBN:{
-    type:DataTypes.STRING,
+    type:DataTypes.INTEGER,
     allowNull:false
     
  },
@@ -42,7 +42,7 @@ const Book = sequelize.define('books',{
 })
 Syncronization:
 
-sequelize.sync() 
+// sequelize.sync() 
 // sequelize.sync({ force: true }) 
 // sequelize.sync({ alter: true }) 
 
