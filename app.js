@@ -22,8 +22,8 @@ const PORT=process.env.PORT || 8000;
 // }
 // app.use(cors(corsOptions));
 app.use(cors({
-//     // origin: 'https://book-assignment-nine.vercel.app'
-    origin: 'http://localhost:3000'
+    origin: 'https://book-assignment-nine.vercel.app'
+    // origin: 'http://localhost:3000'
 }))
 require ('express-async-errors')
 
