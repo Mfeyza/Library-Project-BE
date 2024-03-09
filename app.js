@@ -12,9 +12,19 @@ const app=express()
 
 require('dotenv').config();
 const PORT=process.env.PORT || 8000;
-app.use(cors({
-    origin: 'https://book-assignment-nine.vercel.app'
-}))
+
+const corsOptions = {
+    origin: 'http://localhost:3000', 
+};
+
+if (process.env.NODE_ENV === 'production') {
+    corsOptions.origin = 'https://book-assignment-nine.vercel.app';
+}
+app.use(cors(corsOptions));
+// app.use(cors({
+//     // origin: 'https://book-assignment-nine.vercel.app'
+//     origin: 'http://localhost:3000/'
+// }))
 require ('express-async-errors')
 
 app.use(express.json())
